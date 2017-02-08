@@ -1,0 +1,20 @@
+pm2,supervisor,forever区别
+
+启动server.js 不监听变化。
+pm2 start server.js --name my-named-server -l log.log -o out.log -e err.log
+forever server.js
+
+启动server.js 监听变化。
+supervisor server.js
+pm2 start server.js --name my-named-server -l log.log -o out.log -e err.log --watch
+
+停止服务======
+
+supervisor: 
+借助bash,找到 supervisor的pid和所启动的server.js的pid.同时kill
+
+forever:
+借助bash,找到 forever的pid和所启动的server.js的pid.同时kill
+
+pm2:
+pm2 stop my-named-server或着：pm2 delete my-named-server
