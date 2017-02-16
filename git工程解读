@@ -1,0 +1,17 @@
+1.将普通文件夹变为git工程
+	cd aaa && git init #cd 到目录下，然后git init
+
+2.绑定远程路径
+
+git remote add origin url。添加一个远程库地址。url是远程库的地址。
+
+到此已经是一个完整的git库了。
+
+
+常用命令：
+
+git remote -v 可以查看远程路径。
+
+git remote set-url origin url 。将远程地址改掉
+
+git log 查看日志
